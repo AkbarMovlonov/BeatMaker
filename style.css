@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background-color: #63a1db;
+}
+
+.snare-pad {
+  background-color: #fc9b8a;
+}
+
+.hihat-pad {
+  background-color: #83e493;
+}
+
+.kick-pad.active {
+  background-color: #2384df;
+}
+
+.snare-pad.active {
+  background-color: #f8725a;
+}
+
+.hihat-pad.active {
+  background-color: #2ad447;
+}
+
+.kick-track,
+.hihat-track,
+.snare-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin: 0 2rem;
+}
+
+.controls button {
+  padding: 0.8rem;
+  border: none;
+  background-color: #4e4e4e;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: #424141;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.mute.active {
+  background-color: rgb(167, 165, 165);
+}
+
+.tempo {
+  margin: 1rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 0.1rem;
+  -webkit-appearance: none;
+  margin: 1rem 0;
+  width: 100%;
+  position: relative;
+  background: rgb(97, 97, 97);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
